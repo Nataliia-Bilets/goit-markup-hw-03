@@ -21,28 +21,33 @@
    letter-spacing: 0.03em;
  }
  button {
+   display: block;
+   margin: 0 auto;
+   border: none;
+   border-radius: 4px;
    cursor: pointer;
    font-family: inherit;
  }
  h1, h2, h3, p {
-   margin-top: 0;
-   margin-bottom: 0;;
+   margin: 0;
  }
- ul {
-   margin-top: 0;
-   margin-bottom: 0;
-   padding-left: 0;
- }
+
  img {
    display: block;
    max-width: 100%;
    height: auto;
  }
+ address {
+   font-style: normal;
+ }
  .list {
    list-style: none; 
+   padding-left: 0;
+   margin: 0;
  }
  .link {
    text-decoration: none;
+   color: inherit;
  }
 .container {
    width: 1200px;
@@ -140,19 +145,12 @@
    color: var(--primary-text-color-team-dark);
  }
  .main-btn {
-   min-width: 216px;
-   margin-left: auto;
-   margin-right: auto;
    padding: 10px 32px;
    font-weight: 700;
    font-size: 16px;
    line-height: 1.88;
-   display: flex;
-   align-items: center;
    text-align: center;
-   border: none;
    letter-spacing: 0.06em;
-   border-radius: 4px;
    color: var(--primary-text-color-team-dark);
    background-color: var(--auxi-accente-bgc);
    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -187,6 +185,7 @@
 .feature-title{
    margin-bottom: 10px;
    font-weight: 700;
+   font-size: 14px;
    line-height: 1.14;
    text-transform: uppercase;
 }
@@ -209,7 +208,7 @@
    display: flex;
    flex-wrap: wrap;
    gap: 30px;
-   flex-basis: calc((100% - 60px)3);
+   flex-basis: calc((100% - 60px)/3);
 }
 /* =================Команда=============== */
 .team-main {
@@ -254,22 +253,16 @@
 
 .page-footer {
    background-color: var(--secondary-bgc);
+   padding: 60px 0;
 }
 .page-address {
-   margin-top: 30px;
-}
-
-.section-footer {
-   padding-top: 60px;
-   padding-bottom: 60px;
+   margin-top: 20px;
 }
 
 .logo-light {
    color: var(--primary-text-color-team-dark);
 }
-.address-item {
-   display: block;
-   width: 231px;
+.address-item:not(:last-child) {
    margin-bottom: 9px;
 }
 .address-maps {
@@ -309,9 +302,9 @@
 .filters-menu {
    display: flex;
    align-items: center;
-   margin-bottom: 34px;
+   margin-bottom: 50px;
    justify-content: center;
-   column-gap: 8px;
+   gap: 8px;
 }
 .filters-btn {
    padding: 6px 22px;
@@ -322,8 +315,6 @@
    text-align: center;
    color: var(--primary-text-color);
    background-color: var(--additional-bgc);
-   border-radius: 4px;
-   border: none;
 }
 .filters-btn:hover,
 .filters-btn:focus {
